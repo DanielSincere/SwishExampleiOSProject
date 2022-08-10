@@ -1,0 +1,2 @@
+brew "mint"
+cask "inkscape"
