@@ -47,6 +47,10 @@ targets:
         UIApplicationSceneManifest:
           UIApplicationSupportsMultipleScenes: false
         ITSAppUsesNonExemptEncryption: false
+    preBuildScripts:
+    -
+      name: "Swish: generateCode"
+      script: xcrun --sdk macosx mint run -m ${PROJECT_DIR}/Mintfile swish generate
   AppTests:
     type: bundle.unit-test
     platform: iOS

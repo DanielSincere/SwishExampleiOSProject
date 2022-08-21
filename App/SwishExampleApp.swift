@@ -8,6 +8,7 @@ struct SwishExampleApp: App {
   var body: some Scene {
     WindowGroup {
       Text(Self.greeting)
+      Text(subtitle)
     }
   }
 }
