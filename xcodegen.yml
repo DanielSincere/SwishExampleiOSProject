@@ -9,17 +9,6 @@ schemes:
     test:
       targets:
         - AppTests
-  Screenshots:
-    build:
-      targets:
-        App: all
-        AppUITests: [run, test]
-    test:
-      targets:
-        - AppUITests
-    run:
-      environmentVariables:
-        SCREENSHOTS: "YES"
 targets:
   App:
     type: application
