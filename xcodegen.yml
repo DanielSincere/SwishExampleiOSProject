@@ -9,17 +9,6 @@ schemes:
     test:
       targets:
         - AppTests
-  Screenshots:
-    build:
-      targets:
-        App: all
-        AppUITests: [run, test]
-    test:
-      targets:
-        - AppUITests
-    run:
-      environmentVariables:
-        SCREENSHOTS: "YES"
 targets:
   App:
     type: application
@@ -47,6 +36,10 @@ targets:
         UIApplicationSceneManifest:
           UIApplicationSupportsMultipleScenes: false
         ITSAppUsesNonExemptEncryption: false
+    preBuildScripts:
+    -
+      name: "Swish: generateCode"
+      script: xcrun --sdk macosx mint run -m ${PROJECT_DIR}/Mintfile swish generate
   AppTests:
     type: bundle.unit-test
     platform: iOS

@@ -41,3 +41,7 @@ Then it archives the app using `xcodebuild`.
 Then it exports the app for the App Store using the export options plist using `xcodebuild`.
 
 Finally, it uploads the resulting `.ipa` to the App Store using `altool`.
+
+## `swish generate`
+
+As an example of code generation in an Xcode script phase using Swish, the `generate` target generates a new UUID every time it is run.

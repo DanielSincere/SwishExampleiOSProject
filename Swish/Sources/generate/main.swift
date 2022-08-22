@@ -2,7 +2,7 @@ import Foundation
 
 let contents =
 """
-let subtitle = "The subtitle!"
+let subtitle = "\(UUID().uuidString)"
 """
 
 guard let projectDir = ProcessInfo.processInfo.environment["PROJECT_DIR"] else {
